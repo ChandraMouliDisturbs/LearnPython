@@ -1,3 +1,4 @@
+# Author Chandra Mouli
 a = raw_input()
 b = raw_input()
 tup = (a,b)
