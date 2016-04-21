@@ -46,14 +46,16 @@ def execute_sequence():
             if (command_name=="print"):
                 print central_list
             else:
-                exec(list_cmd+command_name+"()")
+                central_list.__getattribute__(command_name).__call__()
+                # exec(list_cmd+command_name+"()")
         elif(len(li)==2):
                 single_param = li[-1]
-                exec(list_cmd+command_name+"("+single_param+")")
+                central_list.__getattribute__(command_name).__call__(single_param)
         else:
             param1 = li[1]
             param2 = li[-1]
-            exec(list_cmd+command_name+"("+param1+","+param2+")")
+            central_list.__getattribute__(command_name).__call__(int(param1), int(param2))
+
 N = int(raw_input())
 for i in range(N):
     exec_map.append(raw_input().split(" "))

@@ -6,6 +6,10 @@ def using_clause(in_list):
     [out_list.append(int(elem))for elem in in_list]
     return out_list
 
+def using_clause(in_list):
+    return [(int(elem))for elem in in_list]
+
+
 def using_map(in_list):
     return map(int, in_list)
 
